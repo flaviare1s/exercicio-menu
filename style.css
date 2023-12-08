@@ -1,3 +1,5 @@
+
+
 :root {
   font-family: Arial, Helvetica, sans-serif;
   padding: 0;
@@ -10,10 +12,27 @@
   border: 1px solid black;
 }
 
-a {
-  display: block;
+a.link-menu-principal {
+  display: none;
   text-align: left;
   text-decoration: none;
   padding: 20px;
   margin: auto;
 }
+
+#burger-icone {
+  color: blue;
+  align-items: center;
+  padding: 20px;
+  margin-left: 12px;
+}
+
+@media screen and (min-width: 700px) {
+  .menu-principal {
+    display: flex;
+    justify-content: space-around;
+    border: none;
+  }
+}
+
+
