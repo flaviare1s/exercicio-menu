@@ -6,6 +6,8 @@ export function addBurgerMenuEvents() {
     const botao2El = burgerMenuEl.querySelector('#botao2')
     const menuChild1El = burgerMenuEl.querySelector('#menuChild1')
     const menuChild2El = burgerMenuEl.querySelector('#menuChild2')
+    const closeButton1El = burgerMenuEl.querySelector('#closeButton1')
+    const closeButton2El = burgerMenuEl.querySelector('#closeButton2')
   
     menuOpenButtonEl.addEventListener('click', () => {
       const menuBaseEl = burgerMenuEl.querySelector('#menuBase')
@@ -25,5 +27,13 @@ export function addBurgerMenuEvents() {
 
     botao2El.addEventListener('click', () => {
         menuChild2El.style.left = '0px'
+    })
+
+    closeButton1El.addEventListener('click', () => {
+        menuChild1El.style.left = '-300px'
+    })
+
+    closeButton2El.addEventListener('click', () => {
+        menuChild2El.style.left = '-300px'
     })
   }
