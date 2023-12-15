@@ -1,5 +1,3 @@
-
-
 :root {
   font-family: Arial, Helvetica, sans-serif;
   padding: 0;
@@ -7,57 +5,9 @@
   box-sizing: border-box;
 }
 
-#menu-principal {
-  width: 130px;
-}
-
-#menu-link2 {
-  width: 130px;
-}
-
-ul {
-  list-style: none;
-}
-
-#burger-icone1, #burger-icone2 {
-  align-items: center;
+button {
+  border: 1px solid #1C1C1C;
+  background-color: #7C7C7C;
   padding: 20px;
-  margin-left: 12px;
-}
-
-.link-menu-principal {
-  display: none;
-  text-align: left;
-  text-decoration: none;
-  padding: 20px;
-  margin: auto;
-  color: black;
-}
-
-.link-menu-link2 {
-  display: none;
-  text-align: left;
-  text-decoration: none;
-  padding: 20px;
-  margin: auto;
-  color: black;
-}
-
-#link2 {
-  cursor: pointer;
-}
-
-
-@media screen and (min-width: 700px) {
-  #menu-principal {
-    display: flex;
-    justify-content: space-around;
-    border: none;
-  }
-
-  #menu-link2 {
-    display: none;
-  }
-}
-
-
+  width: 30%;
+} 
