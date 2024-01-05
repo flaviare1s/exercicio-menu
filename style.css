@@ -74,11 +74,7 @@ button:hover {
   transition: opacity 300ms ease-in-out;
 }
 
-#productsContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 30px;
-}
+
 
 .product-card {
   border: 1.5px solid white;
@@ -103,5 +99,19 @@ button:hover {
 
 .product-price {
   font-size: 14px;
+}
+
+#productContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: white;
+}
+
+@media only screen and (min-width: 600px) {
+  #productsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+  }
 }
 
