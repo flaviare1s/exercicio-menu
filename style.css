@@ -109,12 +109,28 @@ button:hover {
 
 #productContainer {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   background-color: white;
 }
 
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 400px) {
+  #productsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  #productsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
   #productsContainer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
