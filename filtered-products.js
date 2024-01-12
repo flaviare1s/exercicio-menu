@@ -9,13 +9,9 @@ async function fetchProducts() {
   return products
 }
 
-
-async function products() {
-  addBurgerMenuEvents()
-  const products = await fetchProducts()
-  console.log('Products:', products)
-
+async function renderProducts(products) {
   const productsContainerEl = document.querySelector('#productsContainer')
+  productsContainerEl.innerHTML = ''
 
     for (const product of products) {
       const productCard = document.createElement('div')
@@ -46,6 +42,39 @@ async function products() {
       productInformation.appendChild(productNameEl)
       productInformation.appendChild(productPriceEl)
     }
+}
+
+function renderSumOfProducts(value) {
+  const sumOfProductsEl = document.querySelector('#sumOfProducts')
+  sumOfProductsEl.innerHTML = `Valor total em estoque: R$${value}`
+}
+
+function addInputChangeEvent(input, products) {
+  input.addEventListener('change', () => {
+    renderPage(products, input.value)
+  })
+}
+
+function renderPage(products, filterValue) {
+  const value = Number(filterValue)
+  const filteredProducts = products.filter((product) => Number(product.price) < value)
+  const sumOfValuesOfFilteredProducts = filteredProducts.reduce((acc, item) => {
+    return acc + Number(item.price)
+  }, 0)
+  
+  renderProducts(filteredProducts)
+  renderSumOfProducts(sumOfValuesOfFilteredProducts)
+}
+
+
+async function products() {
+  addBurgerMenuEvents()
+  const products = await fetchProducts()
+  console.log('Products:', products)
+  const inputEl = document.querySelector('#valorAte')
+  const value = Number(inputEl.value)
+  renderPage(products, value)
+  addInputChangeEvent(inputEl, products)
   }
 
 products()
