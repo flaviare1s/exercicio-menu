@@ -23,7 +23,6 @@ async function main() {
   console.log('### Users:', users)
   
   const productsContainerEl = document.querySelector('#productsContainer')
-
   for (const product of products) {
     const productCard = document.createElement('div')
     productCard.classList.add('product-card')
@@ -36,6 +35,7 @@ async function main() {
 
     const imageEl = document.createElement('img')
     imageEl.src = product.image
+    imageEl.classList.add('image')
 
     const productNameEl = document.createElement('div')
     productNameEl.classList.add('product-name')
