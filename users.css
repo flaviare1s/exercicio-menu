@@ -1,0 +1,76 @@
+.user-card {
+    border: 1.5px solid red;
+    border-radius: 10px;
+    padding: 30px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .user-image-container {
+    padding-bottom: 20px;
+  }
+  
+  .user-image {
+    box-shadow: 2px 2px 2px rgba(255, 0, 0, 0.484);
+  }
+  
+  .user-information {
+    color: red;
+    text-align: center;
+  }
+  
+  .user-name {
+    font-weight: bold;
+    padding-bottom: 20px;
+  }
+  
+  .product-price {
+    font-size: 14px;
+  }
+  
+  #userContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: white;
+  }
+  
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+
+   
+  @media only screen and (min-width: 400px) {
+    #usersContainer {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+  }
+  
+  @media only screen and (min-width: 800px) {
+    #usersContainer {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 30px;
+    }
+  }
+  
+  @media only screen and (min-width: 1000px) {
+    #usersContainer {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 30px;
+    }
+  }
+  
+  
+  
+ 
+  
